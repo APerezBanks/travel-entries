@@ -1,0 +1,131 @@
+html,
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  background-color: rgb(232, 232, 232);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+  margin: 45px auto;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+header {
+  background-color: #2d2d2d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  max-width: 350px;
+  border-radius: 5px;
+  border-right: 6px solid #feb9fb;
+  border-bottom: 6px solid #feb9fb;
+  height: 75px;
+}
+
+header > img {
+  width: 34px;
+  margin-right: 7px;
+}
+
+header > h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+article.journal-entry {
+  display: flex;
+  margin-bottom: 36px;
+  background-color: #2d2d2d;
+  border-right: 4px solid #feb9fb;
+  border-bottom: 4px solid #feb9fb;
+  border-radius: 8px;
+  color: #ffffff;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+article.journal-entry .marker {
+  width: 7px;
+  margin-right: 4px;
+}
+
+article.journal-entry .main-image-container {
+  width: 125px;
+  height: 168px;
+  overflow: hidden;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-right: 19px;
+}
+
+article.journal-entry .main-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.info-container span.country {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-right: 12px;
+}
+
+.info-container a {
+  color: #feb9fb;
+  font-size: 0.7rem;
+}
+
+.info-container a:visited {
+  color: #918305;
+}
+
+.info-container h2.entry-title {
+  margin-top: 7px;
+  margin-bottom: 17px;
+}
+
+.info-container p.trip-dates {
+  font-weight: bold;
+}
+
+.info-container p.entry-text {
+  line-height: 1.5;
+  font-size: 0.8rem;
+  max-height: 4.5rem;
+  overflow-y: auto;
+  display: block;
+}
+
+.info-container p.entry-text::-webkit-scrollbar {
+  width: 6px;
+}
+
+.info-container p.entry-text::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.info-container p.entry-text::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
